@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iVA-HK-SNs">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="a7c-fn-RnE">
+            <objects>
+                <viewController id="iVA-HK-SNs" customClass="TableViewController" customModule="WeatherAppAvi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jtw-kX-6lq" customClass="TableViewControlle">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4Py-XZ-NWl">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TableViewCell" id="e7H-5b-C81" customClass="TableViewCell" customModule="WeatherAppAvi" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e7H-5b-C81" id="1MR-k0-6V9">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCR-a1-EhV">
+                                                    <rect key="frame" x="62" y="12" width="317" height="19.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l8x-Mp-y6f">
+                                                    <rect key="frame" x="15" y="6" width="32" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="32" id="kRO-Sl-cKn"/>
+                                                        <constraint firstAttribute="width" constant="32" id="vFF-EQ-LGe"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="yCR-a1-EhV" firstAttribute="leading" secondItem="l8x-Mp-y6f" secondAttribute="trailing" constant="15" id="25v-bO-xhg"/>
+                                                <constraint firstItem="l8x-Mp-y6f" firstAttribute="leading" secondItem="1MR-k0-6V9" secondAttribute="leading" constant="15" id="jJd-de-3Pw"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="yCR-a1-EhV" secondAttribute="trailing" constant="15" id="kjT-UI-7hF"/>
+                                                <constraint firstItem="l8x-Mp-y6f" firstAttribute="centerY" secondItem="1MR-k0-6V9" secondAttribute="centerY" id="sIy-7d-aJd"/>
+                                                <constraint firstItem="yCR-a1-EhV" firstAttribute="centerY" secondItem="1MR-k0-6V9" secondAttribute="centerY" id="sN6-kP-0SZ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="yCR-a1-EhV" id="O0k-Au-pNh"/>
+                                            <outlet property="weatherImageView" destination="l8x-Mp-y6f" id="tVd-91-4lR"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AU9-Wd-HxH">
+                                <rect key="frame" x="125" y="822" width="164" height="30"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addButtonAction:" destination="iVA-HK-SNs" eventType="touchUpInside" id="p8r-7G-MsF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4Py-XZ-NWl" firstAttribute="trailing" secondItem="hrZ-OC-7IX" secondAttribute="trailing" id="0Rl-zR-Rj9"/>
+                            <constraint firstItem="4Py-XZ-NWl" firstAttribute="top" secondItem="jtw-kX-6lq" secondAttribute="top" id="4O0-js-R9a"/>
+                            <constraint firstItem="AU9-Wd-HxH" firstAttribute="leading" secondItem="hrZ-OC-7IX" secondAttribute="leading" constant="125" id="Qja-OZ-qVd"/>
+                            <constraint firstItem="AU9-Wd-HxH" firstAttribute="centerX" secondItem="4Py-XZ-NWl" secondAttribute="centerX" id="auq-Dj-vdl"/>
+                            <constraint firstAttribute="bottom" secondItem="4Py-XZ-NWl" secondAttribute="bottom" id="r1R-QE-S4v"/>
+                            <constraint firstItem="4Py-XZ-NWl" firstAttribute="leading" secondItem="hrZ-OC-7IX" secondAttribute="leading" id="xZr-Tq-xm2"/>
+                            <constraint firstItem="hrZ-OC-7IX" firstAttribute="bottom" secondItem="AU9-Wd-HxH" secondAttribute="bottom" constant="10" id="z3N-vg-Tut"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hrZ-OC-7IX"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="4Py-XZ-NWl" id="JnB-uF-6AK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Abf-g8-qpW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="102.89855072463769" y="154.6875"/>
+        </scene>
+    </scenes>
+</document>

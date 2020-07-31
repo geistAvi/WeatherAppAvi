@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fXW-b1-uBm">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Animation View Controller-->
+        <scene sceneID="WLd-on-rjt">
+            <objects>
+                <viewController id="fXW-b1-uBm" customClass="AnimationViewController" customModule="WeatherAppAvi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BEq-G2-76y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QUz-ur-VTx">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nG8-EK-jeg">
+                                <rect key="frame" x="15" y="353" width="384" height="42"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="35"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGY-vO-iGP">
+                                <rect key="frame" x="15" y="403" width="384" height="144"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="120"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rain" translatesAutoresizingMaskIntoConstraints="NO" id="pux-Yr-Yb8">
+                                <rect key="frame" x="-240" y="94" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="OHG-q0-2e0"/>
+                                    <constraint firstAttribute="width" constant="240" id="zem-g7-7Vz"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="nG8-EK-jeg" firstAttribute="leading" secondItem="Ssc-d8-fIV" secondAttribute="leading" constant="15" id="7Uv-Mi-Pi0"/>
+                            <constraint firstItem="pux-Yr-Yb8" firstAttribute="leading" secondItem="Ssc-d8-fIV" secondAttribute="leading" constant="-240" id="90q-RY-OMv"/>
+                            <constraint firstItem="QUz-ur-VTx" firstAttribute="top" secondItem="Ssc-d8-fIV" secondAttribute="top" id="B7U-1k-VrE"/>
+                            <constraint firstItem="Ssc-d8-fIV" firstAttribute="trailing" secondItem="nG8-EK-jeg" secondAttribute="trailing" constant="15" id="BDn-C8-afh"/>
+                            <constraint firstAttribute="bottom" secondItem="QUz-ur-VTx" secondAttribute="bottom" id="Qdu-60-fRX"/>
+                            <constraint firstItem="QUz-ur-VTx" firstAttribute="trailing" secondItem="Ssc-d8-fIV" secondAttribute="trailing" id="c2x-Tf-MSq"/>
+                            <constraint firstItem="mGY-vO-iGP" firstAttribute="top" secondItem="nG8-EK-jeg" secondAttribute="bottom" constant="8" id="c6I-Ar-19s"/>
+                            <constraint firstItem="pux-Yr-Yb8" firstAttribute="top" secondItem="Ssc-d8-fIV" secondAttribute="top" constant="50" id="e2c-Dd-CVi"/>
+                            <constraint firstItem="mGY-vO-iGP" firstAttribute="leading" secondItem="Ssc-d8-fIV" secondAttribute="leading" constant="15" id="jvg-Rw-DBw"/>
+                            <constraint firstItem="QUz-ur-VTx" firstAttribute="trailing" secondItem="Ssc-d8-fIV" secondAttribute="trailing" id="k0E-fZ-Gqk"/>
+                            <constraint firstAttribute="bottom" secondItem="QUz-ur-VTx" secondAttribute="bottom" id="kri-eD-lad"/>
+                            <constraint firstItem="QUz-ur-VTx" firstAttribute="leading" secondItem="BEq-G2-76y" secondAttribute="leading" id="nwd-j5-rVf"/>
+                            <constraint firstItem="QUz-ur-VTx" firstAttribute="top" secondItem="Ssc-d8-fIV" secondAttribute="top" id="qqg-VW-MrC"/>
+                            <constraint firstItem="nG8-EK-jeg" firstAttribute="top" secondItem="Ssc-d8-fIV" secondAttribute="top" constant="309" id="xV9-ir-ddp"/>
+                            <constraint firstItem="Ssc-d8-fIV" firstAttribute="trailing" secondItem="mGY-vO-iGP" secondAttribute="trailing" constant="15" id="xmp-fy-Svh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ssc-d8-fIV"/>
+                    </view>
+                    <connections>
+                        <outlet property="cityImageView" destination="QUz-ur-VTx" id="u1R-jJ-9qq"/>
+                        <outlet property="cityLabel" destination="nG8-EK-jeg" id="F94-TY-y8p"/>
+                        <outlet property="tempLabel" destination="mGY-vO-iGP" id="lrx-4F-kV6"/>
+                        <outlet property="weatherImageLeadingConstraint" destination="90q-RY-OMv" id="Dqp-oo-APU"/>
+                        <outlet property="weatherImageView" destination="pux-Yr-Yb8" id="Gvt-jm-g6B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ygv-ur-3Mb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="160.86956521739131" y="129.91071428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="rain" width="170.66667175292969" height="170.66667175292969"/>
+    </resources>
+</document>
